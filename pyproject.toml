@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "capify-api"
+version = "0.1.0"
+description = ""
+authors = ["PodYapolsky <podyapolskiyaa@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.112.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
