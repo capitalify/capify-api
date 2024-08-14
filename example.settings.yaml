@@ -1,0 +1,2 @@
+mongodb_settings:
+  url: 'mongodb://mongouser:mongopassword@localhost:27017/db?authSource=admin'
