@@ -1,15 +1,18 @@
 services:
-  # api:
-  #   container_name: api
-  #   build: .
-  #   restart: "no"
-  #   environment:
-  #     - TZ=Europe/Moscow
-  #   ports:
-  #     - 8000:8000
-  #     # volumes:
-  #     # - api
-  #   depends_on: [ mongodb ]
+  api:
+    container_name: api
+    build: .
+    restart: "always"
+    environment:
+      - TZ=Europe/Moscow
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongodb
+    volumes:
+      - "./settings.yaml:/code/settings.yaml:ro" # Read-only settings file
+    env_file:
+      - .env
 
   mongodb:
     container_name: mongodb
